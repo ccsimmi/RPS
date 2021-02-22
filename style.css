@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@300&display=swap');
+
+h1, h2 {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 3px;
+    color: white;
+}
+
+p {
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    background: #282828;
+    
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr{
+    border-bottom: 1rem;
+    width: 90%;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 340px;
+    background: #5e5b5b;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+span > p{
+    margin-left: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 182px;
+}
+
+.btn-player, .btn-comp{
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    outline: none;
+    background: white;
+}
+
+.btn-player{
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.btn-player:hover{
+    transform: scale(0.9);
+}
+.rock-img{
+    width: 64px;
+    height: 64px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: lightgreen;
+    text-decoration: underline;
+}
+
+/* tablet size < 1000px 
+    phone size < 500px;
+    */ 

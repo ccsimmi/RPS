@@ -2,86 +2,51 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Rock, PPaper, Scissors</title>
+        <title>Rock, Paper, Scissors</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script>
-            let pCount = 0; // player score
-            let cCount = 0; // computer score
-            let final;  // string to display results and winner/loser status
-
-
-            function computerPlay(){    //computer generates a random number 1 to 3, depending on what is returned: output is 'rock' 'paper' 'scissors'
-                let compNum = Math.ceil(Math.random() * 3);
-                let result;
-                 switch(compNum){
-                    case 1:
-                        result = 'rock';
-                        break;
-                    case 2:
-                        result = 'paper';
-                        break;
-                    case 3:
-                        result = 'scissors';
-                        break;
-                }
-                return result;
-            };
-
-            function round(playerSelection, computerSelection){     // compares computer selection and players selection and updates scores
-                let result = '';
-                if(playerSelection == 'rock' && computerSelection == 'paper'){
-                    result = 'You lose! Paper beats Rock!';
-                    cCount++;
-                } else if(playerSelection == 'paper' && computerSelection == 'scissors'){
-                    result = 'You lose! Scissors beats Paper!'
-                    cCount++;
-                } else if(playerSelection == 'scissors' && computerSelection == 'rock'){
-                    result = 'You lose! Rock beats Scissors!';
-                    cCount++;
-                } else if(playerSelection == 'rock' && computerSelection == 'scissors'){
-                    result = 'You win! Rock beats Scissors!';
-                    pCount++;
-                } else if(playerSelection == 'paper' && computerSelection == 'rock'){
-                    result = 'You win! Paper beats Rock!';
-                    pCount++;
-                } else if(playerSelection == 'scissors' && computerSelection == 'paper'){
-                    result = 'You win! Scissors beats paper!';
-                    pCount++;
-                } else if(playerSelection == 'paper' && computerSelection == 'paper'){
-                    result = 'Draw! You both picked Paper!';
-                } else if(playerSelection == 'scissors' && computerSelection == 'scissors'){
-                    result = 'Draw! You both picked Scissors!';
-                } else {
-                    result = 'Draw! You both picked Rock!';
-                }
-                return `${result} Player: ${pCount}, Computer: ${cCount}.`;
-            };
-
-
-            function game(){    // main function: asks for users input and runs all functions
-                let playerChoice = prompt("Select rock, paper or scissors").toLowerCase();
-                return round(playerChoice, computerPlay());
-            };
-           
-
-            //calls function game until either player or computer has 5 wins first
-            while(pCount < 20){
-                if(pCount == 5){
-                    final = `Hooray! You won ${pCount} to ${cCount}!`;
-                    console.log(final);
-                    break;
-                } else if (cCount == 5){
-                    final = `Bummer! You lost ${cCount} to ${pCount}.`;
-                    console.log(final);
-                    break;
-                }
-                console.log(game());
-            }
-            
-        </script>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <p class="output">The winner is the first to five points.</p>
+    </header>
+    <hr>
+    <br>
+    <br>
+    <main>
+        <section class="player-info">
+            <h2>Player</h2>
+            <span>
+                <img src="icons/player.png" alt="player">
+                <p class="player-score">Score: </p>
+            </span>
+            <div class="container">
+                <button class="rock btn-player"><img src="icons/rock.png" alt="rock"></button>
+                <button class="paper btn-player"><img src="icons/paper.png" alt="paper"></button>
+                <button class="scissors btn-player"><img src="icons/scissors.png" alt="scissors"></button>
+            </div>
+        </section>
+        <section class="player-info">
+            <h2>Computer</h2>
+            <span>
+                <img src="icons/comp.png" alt="computer">
+                <p class="comp-score">Score: </p>
+            </span>
+            <div class="container">
+                <button class="btn-comp"><img src="icons/rock.png" alt="rock"></button>
+                <button class="btn-comp"><img src="icons/paper.png" alt="paper"></button>
+                <button class="btn-comp"><img src="icons/scissors.png" alt="scissors"></button>
+            </div>
+        </section>
+    </main>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p><a href="https://github.com/ccsimmi/RPS" target="_blank">ccSimmi @ github</a></p>
+    </footer>
+    <script src='game.js'></script>   
     </body>
 </html>
