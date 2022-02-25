@@ -1,4 +1,3 @@
-A rock paper scissors game.
-My first project utilising the DOM.
-Things to do:
-1) Make it responsive
+# Rock, Paper, Scissors
+
+A portfolio project made during University which got me my first job.
